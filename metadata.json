@@ -1,0 +1,6 @@
+{
+  "name": "Solar Zensorial — Espaçoterapias",
+  "description": "Clínica de psicologia e terapias integrativas. Acolhimento humano, alívio da ansiedade e autoconhecimento em um espaço seguro e restaurador.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

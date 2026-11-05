@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Lato", system-ui, -apple-system, sans-serif;
+  
+  --color-emerald-950: #042f24;
+  --color-emerald-900: #064e3b;
+  --color-emerald-800: #065f46;
+  --color-emerald-700: #047857;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-50: #ecfdf5;
+
+  --color-gold-900: #78350f;
+  --color-gold-800: #92400e;
+  --color-gold-700: #b45309;
+  --color-gold-600: #d4af37;
+  --color-gold-500: #eab308;
+  --color-gold-400: #facc15;
+  --color-gold-100: #fef3c7;
+  --color-gold-50: #fffbeb;
+
+  --color-linen-50: #fcfbf9;
+  --color-linen-100: #faf8f5;
+  --color-linen-200: #f3efe9;
+  --color-linen-300: #e9e3da;
+  --color-linen-400: #d8cec1;
+
+  --color-slate-forest: #142921;
+  --color-slate-moss: #334b41;
+  --color-slate-sage: #567265;
+}
+
+:root {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Lato", system-ui, -apple-system, sans-serif;
+  
+  --bg-primary: #faf8f5;
+  --surface-card: #ffffff;
+  --surface-elevated: rgba(255, 255, 255, 0.85);
+  --border-hairline: #e8e3db;
+  --text-main: #142921;
+  --text-muted: #4e665c;
+  --color-emerald: #10b981;
+  --color-gold: #d4af37;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    background-color: var(--bg-primary);
+  }
+
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    selection-background-color: #10b981;
+    selection-color: #ffffff;
+  }
+
+  ::selection {
+    background-color: rgba(16, 185, 129, 0.25);
+    color: #064e3b;
+  }
+
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: var(--font-serif);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Glassmorphism & Micro-elevations */
+.glass-nav {
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(232, 227, 219, 0.8);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 227, 219, 0.9);
+}
+
+.card-hover-effect {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(6, 78, 59, 0.08), 0 0 1px 1px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle botanical ambient glow */
+.ambient-glow-emerald {
+  background: radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.08) 0%, rgba(250, 248, 245, 0) 70%);
+}
+
+.ambient-glow-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, rgba(250, 248, 245, 0) 70%);
+}
+
+/* Noise overlay */
+.subtle-grain {
+  background-image: radial-gradient(rgba(20, 41, 33, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
